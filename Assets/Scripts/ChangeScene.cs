@@ -1,14 +1,14 @@
 using UnityEngine;
-using UnityEngine.UI;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    [SerializeField] string sceneName = "1_Main Menu";
+    [SerializeField] string sceneName = "";
 
-
-    public void GoToScene(){
-        SceneManager.LoadScene(sceneName);
+    public void CreateFolderScene(){
+        SceneManager.LoadScene("2_CreateNewFolder");
+    }
+    public void OpenFolderScene(){
+        SceneManager.LoadScene("2_Folders");
     }
 }
