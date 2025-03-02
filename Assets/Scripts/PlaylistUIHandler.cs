@@ -19,7 +19,7 @@ public class PlaylistUIHandler : MonoBehaviour
     {
         selectedFolder = PlayerPrefs.GetString("myString", "No path set");
         videoPath = Path.Combine(Application.dataPath, "Folders", title.text, "VideoFilePaths.txt");
-        title.text = selectedFolder;
+        //title.text = selectedFolder;
         PopulateDropdown();
     }
 
