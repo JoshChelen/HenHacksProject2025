@@ -16,4 +16,8 @@ public class ChangeScene : MonoBehaviour
     public void OpenFolderScene(){
         SceneManager.LoadScene("2_OpenFolder");
     }
+
+    public void VidNoteScene(){
+        SceneManager.LoadScene("3_Vid+Notes");
+    }
 }
