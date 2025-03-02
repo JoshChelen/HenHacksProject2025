@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class DropdownUpdater : MonoBehaviour
+public class UpdateTimestamps : MonoBehaviour
 {
     public TMP_InputField inputField;
     public TMP_Dropdown dropdown;
