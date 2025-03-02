@@ -10,17 +10,23 @@ public class PlaylistUIHandler : MonoBehaviour
     public TMP_Dropdown videoSelect;
     public TMP_InputField mp4PathInput;
     public Button saveMP4;
+    public TMP_InputField notes;
+    public Button saveNotes;
 
     string selectedFolder;
     string videoPath;
+    string notesPath;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        title.text = selectedFolder;
         selectedFolder = PlayerPrefs.GetString("myString", "No path set");
         videoPath = Path.Combine(Application.dataPath, "Folders", title.text, "VideoFilePaths.txt");
-        title.text = selectedFolder;
+        //notesPath = Path.Combine(Application.dataPath, "Folders", title.text, "NotesFilePath.txt");
+        //notes.text = File.ReadAllText(notesPath); 
         PopulateDropdown();
+        //SetNotes();
     }
 
     public void SaveMP4(){
@@ -77,4 +83,15 @@ public class PlaylistUIHandler : MonoBehaviour
 
         Debug.Log("Dropdown updated with video paths.");
     }
+    
+
+
+    public void SetNotes(){
+        notes.text = File.ReadAllText(notesPath); 
+    }
+    
+    public void SaveNotes(){
+
+    }
+
 }

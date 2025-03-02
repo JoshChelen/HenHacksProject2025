@@ -7,6 +7,8 @@ using System.IO;
 using UnityEditor; // Needed for AssetDatabase.Refresh()
 #endif
 
+
+
 public class CreateFolder : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -61,14 +63,20 @@ public class CreateFolder : MonoBehaviour
     private static void CreateNecessaryFiles(string folderPath)
     {
         // Define the file path
-        string filePath = Path.Combine(folderPath, "VideoFilePaths.txt");
-
+        string videoFilePath = Path.Combine(folderPath, "VideoFilePaths.txt");
+        string notesFilePath = Path.Combine(folderPath,"NotesFilePath.txt");
         // Check if file exists, if not, create it
-        if (!File.Exists(filePath)){
-            File.WriteAllText(filePath, ""); // Create an empty file
-            Debug.Log("Created text file: " + filePath);
+        if (!File.Exists(videoFilePath)){
+            File.WriteAllText(videoFilePath, ""); // Create an empty file
+            Debug.Log("Created text file: " + videoFilePath);
         } else {
-            Debug.Log("Text file already exists: " + filePath);
+            Debug.Log("Text file already exists: " + videoFilePath);
+        }
+        if (!File.Exists(notesFilePath)){
+            File.WriteAllText(notesFilePath, ""); // Create an empty file
+            Debug.Log("Created text file: " + notesFilePath);
+        } else {
+            Debug.Log("Text file already exists: " + notesFilePath);
         }
     }
 
