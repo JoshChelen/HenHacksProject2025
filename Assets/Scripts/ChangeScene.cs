@@ -6,11 +6,7 @@ public class ChangeScene : MonoBehaviour
     public void MainMenuScene(){
         SceneManager.LoadScene("1_MainMenu");
     }
-    public void CreateFolderScene(){
-        SceneManager.LoadScene("2_CreateNewFolder");
+    public void OpenFolder(){
+        SceneManager.LoadScene("2_OpenFolder");
     }
-    public void OpenFolderScene(){
-        SceneManager.LoadScene("2_Folders");
-    }
-    
 }
